@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureException;
 
 @Component
@@ -44,10 +45,10 @@ public class JwtTokenUtil {
     final String uniqueId = getUniqueId(token);
 
     if (!schemeIds.contains(audience)) {
-      throw new SignatureException("audnot authorised to access the resource");
+      throw new SignatureException("aud not authorised to access the resource");
     }
     if (StringUtils.isBlank(uniqueId)) {
-      throw new SignatureException("jti must be present to access the resource");
+      throw new MalformedJwtException("jti must be present to access the resource");
     }
     // using database to limit the request to 1 per unique id instead of using jwt expiration
     if (requestsRepo.existsByUniqueId(uniqueId)) {
