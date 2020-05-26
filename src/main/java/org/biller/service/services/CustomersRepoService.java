@@ -7,8 +7,8 @@ import javax.annotation.PostConstruct;
 import org.apache.commons.collections4.CollectionUtils;
 import org.biller.service.entities.CustomerEntity;
 import org.biller.service.enums.Attribute;
-import org.biller.service.interfaces.IAttributeFinder;
 import org.biller.service.interfaces.FindByAttributeIdentifier;
+import org.biller.service.interfaces.IAttributeFinder;
 import org.biller.service.models.AttributeIdentifiers;
 import org.biller.service.repos.CustomersRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class CustomersRepoService implements FindByAttributeIdentifier<CustomerE
   @Autowired
   private CustomersRepo repo;
 
-  EnumMap<Attribute, IAttributeFinder<CustomerEntity>> map;
+  private EnumMap<Attribute, IAttributeFinder<CustomerEntity>> map = new EnumMap<>(Attribute.class);
 
   @PostConstruct
   private void init() {
