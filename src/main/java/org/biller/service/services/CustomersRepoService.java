@@ -4,7 +4,6 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.PostConstruct;
-import org.apache.commons.collections4.CollectionUtils;
 import org.biller.service.entities.CustomerEntity;
 import org.biller.service.enums.Attribute;
 import org.biller.service.interfaces.FindByAttributeIdentifier;
@@ -36,15 +35,10 @@ public class CustomersRepoService implements FindByAttributeIdentifier<CustomerE
   }
 
   @Override
-  public Optional<CustomerEntity> findByAtrributeIdentifier(
+  public Optional<CustomerEntity> findByMultipleAtrributeIdentifier(
       List<AttributeIdentifiers> identifiers) {
-    if (CollectionUtils.size(identifiers) == 1) {
-      return findByAtrributeIdentifier(identifiers.get(0));
-    } else if (CollectionUtils.size(identifiers) > 1) {
-      // logic to find customer by multiple identifiers. Can throw non unique result if multiple
-      // customers found
-    }
-    return Optional.empty();
+    // TODO Auto-generated method stub
+    return null;
   }
 
 }
