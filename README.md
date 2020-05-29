@@ -80,12 +80,7 @@ id |      name      |         email         | display_name  |   phone    | accou
 ### 2. Bills Table
 ```
 id |     bill_id      |     status      | customer_account | bill_type | recurrence | amount_exactness | pending_amount | total_amount | metadata |          due_date          |         created_at        
-
- 
-
 ----+------------------+-----------------+------------------+-----------+------------+------------------+----------------+--------------+----------+----------------------------+---------------------------
-
--
   1 | e21e1Rasd3r1r3r1 | CREATED         | 1234567890       | DEBIT     | ONE_TIME   | EXACT            |            900 |          900 | {}       | 2020-05-25 18:50:38.173382 | 2020-05-24 18:50:38.173382
 
   2 | e21e1Rasd3r1r3r2 | CREDIT_RECEIVED | 1234567890       | DEBIT     | ONE_TIME   | EXACT            |           8900 |         8900 | {}       | 2020-05-25 18:50:38.173382 | 2020-05-24 18:50:38.173382
