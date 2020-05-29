@@ -4,7 +4,7 @@ Base URL for the service: https://biller-service.sloppy.zone
 
 ## JWT Authentication
 
-JWT scheme ID: 7e528140-c760-4699-b864-26d6474121b5
+JWT scheme ID: 7e528140-c760-4699-b864-26d6474121b5 <br>
 JWT secret (base64 encoded): MTFiMjEyYWEtNDJkOC00MGEzLWIyZTYtZDQ1MzU2ZjhkYTE4
 
 ### JWT Token format
@@ -21,7 +21,7 @@ Payload: {
 Signature: HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), your-256-bit-secret)
 ```
 ## Sample APIs
-Token is limited to 1 per request and need to be generate each time to access the resource
+Token is limited to 1 per request and needs to be generated each time to access the resource
 
 ### 1. Fetch customer bills
 ```
@@ -102,6 +102,3 @@ id |     bill_id      |     status      | customer_account | bill_type | recurre
 
   9 | e21e1Rasd3r1r3r8 | CREATED         | 1234567897       | DEBIT     | ONE_TIME   | EXACT            |            400 |          460 | {}       | 2020-05-25 18:50:38.173382 | 2020-05-24 18:50:38.173382
 ```
-
-
-
