@@ -14,5 +14,5 @@ INSERT INTO bills VALUES (4, 'e21e1Rasd3r1r3r4', 'SETTLED', '1234567893', 'DEBIT
 INSERT INTO bills VALUES (5, 'e21e1Rasd3r1r3r5', 'CREDIT_RECEIVED', '1234567890', 'DEBIT', 'ONE_TIME', 'EXACT', '4000', '400','{}', now() + '1 day');
 INSERT INTO bills VALUES (6, 'e21e1Rasd3r1r3r6', 'SETTLED', '1234567895', 'DEBIT', 'ONE_TIME', 'EXACT', '400', '450','{}', now() + '1 day');
 INSERT INTO bills VALUES (7, 'e21e1Rasd3r1r3r7', 'CREDIT_RECEIVED', '1234567896', 'DEBIT', 'ONE_TIME', 'EXACT', '400', '400','{}', now() + '1 day');
-INSERT INTO bills VALUES (9, 'e21e1Rasd3r1r3r8', 'CREATED', '1234567897', 'DEBIT', 'ONE_TIME', 'EXACT', '400', '460','{}', now() + '1 day');
+INSERT INTO bills VALUES (9, 'e21e1Rasd3r1r3r8', 'CREATED', '1234567895', 'DEBIT', 'ONE_TIME', 'EXACT', '400', '460','{}', now() + '1 day');
 ALTER SEQUENCE bills_id_seq RESTART with 9;
