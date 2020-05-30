@@ -60,7 +60,7 @@ curl --location --request POST 'https://biller-service.sloppy.zone/v1/bills/fetc
 ## Database Schema
 ### 1. Customers Table
 ```
-id |      name      |         email         | display_name  |   phone    | account_id | metadata | active |         created_at         
+ id |      name      |         email         | display_name  |   phone    | account_id | metadata | active |         created_at         
 ----+----------------+-----------------------+---------------+------------+------------+----------+--------+----------------------------
 
   1 | Ashok Kumar    | ashok.kumar@gmail.com | Ashok Kumar   | 9999999998 | 1234567890 | {}       | t      | 2020-05-24 18:50:38.173382
@@ -79,7 +79,7 @@ id |      name      |         email         | display_name  |   phone    | accou
 ```
 ### 2. Bills Table
 ```
-id |     bill_id      |     status      | customer_account | bill_type | recurrence | amount_exactness | pending_amount | total_amount | metadata |          due_date          |         created_at        
+ id |     bill_id      |     status      | customer_account | bill_type | recurrence | amount_exactness | pending_amount | total_amount | metadata |          due_date          |         created_at        
 ----+------------------+-----------------+------------------+-----------+------------+------------------+----------------+--------------+----------+----------------------------+---------------------------
   1 | e21e1Rasd3r1r3r1 | CREATED         | 1234567890       | DEBIT     | ONE_TIME   | EXACT            |            900 |          900 | {}       | 2020-05-25 18:50:38.173382 | 2020-05-24 18:50:38.173382
 
